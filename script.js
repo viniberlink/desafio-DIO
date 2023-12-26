@@ -1,22 +1,22 @@
-let saldoRanqueadas = calcularPartidasRanqueadas(200, 115);
+class heroi {
+    constructor(nome, idade, tipo){
+       this.nome = nome
+       this.idade = idade
+       this.tipo = tipo
+   }  
 
-function calcularPartidasRanqueadas(vitorias, derrotas) {
-    let somatorio = vitorias - derrotas;
-    return somatorio;
+   atacar(){
+       if(this.tipo === "mago"){
+               console.log("O " + this.tipo + " usou MAGIA")
+           } else if(this.tipo === "guerreiro") {
+               console.log("O " + this.tipo + " usou ESPADA")
+           } else if(this.tipo === "monge") {
+               console.log("O " + this.tipo + " usou ARTES MARCIAIS")
+           } else if(this.tipo === "ninja") {
+           console.log("O " + this.tipo + " usou SHURIKEN")
+       }
+   }
 }
 
-if(saldoRanqueadas < 10){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "está no nível de Ferro.")
-} else if(saldoRanqueadas === 11 || saldoRanqueadas <= 20){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Bronze.")
-}else if(saldoRanqueadas === 21 || saldoRanqueadas <= 50){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Prata.")
-}else if(saldoRanqueadas === 51 || saldoRanqueadas <= 80){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Ouro.")
-}else if(saldoRanqueadas === 81 || saldoRanqueadas <= 90){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Diamante")
-}else if(saldoRanqueadas === 91 || saldoRanqueadas <= 100){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Lendário.")
-}else if(saldoRanqueadas >= 101){
-    console.log("O Herói tem um win rate de: " + saldoRanqueadas + " vitórias. " +  "Está no nível de Imortal.")
-}
+let novoHeroi = new heroi("Harry Potter" , 18 , "guerreiro")
+novoHeroi.atacar();
